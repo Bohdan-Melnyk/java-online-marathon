@@ -38,16 +38,12 @@ public class Pizza {
 			return this;
 		}
 		public Pizza build() {
-			Pizza.base().addMeat("Meat");
-			Pizza.base().addCheese("Cheese");
-			Pizza.base().addMushroom("Mushroom");
 			return pizza;
 		}
 	}
 }
 class Oven {
 	public static Pizza cook() {
-
-			return Pizza.base().build();
-	}
+        return Pizza.base().addCheese("some cheese").addMeat("chicken").build();
+    }
 }
